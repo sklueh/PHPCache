@@ -47,21 +47,10 @@ class PHPCache
 	mkdir($this->sDirectory, 0777, true);
 	
 	if(!empty($iExpiration))
-	$this->setExpiration($iExpiration);
+	$this->iExpiration = intval($iExpiration);
 
 	if(!empty($sExtension))
-	$this->setExtension($sExtension);
-  }
-	
-  public function setExtension($sExtension)
-  {
-	if(!empty($sExtension))
 	$this->sExtension = $sExtension;
-  }
-	
-  public function setExpiration($iExpiration)
-  {
-	$this->iExpiration = intval($iExpiration);
   }
     
   public function set($sKey, $mData)
