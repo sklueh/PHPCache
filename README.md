@@ -21,7 +21,7 @@ if(!$mData)
 		           2 => 'Wert 1',
 		           3 => 'Blaaa');
 	
-    //save data in the cache;
+    //save data to cache;
     $oCache->set('my_cache', $mData);
 }
 	
